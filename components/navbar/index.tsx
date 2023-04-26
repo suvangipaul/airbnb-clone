@@ -4,7 +4,13 @@ import Logo from './Logo';
 import Search from './Search';
 import UserMenu from './UserMenu';
 
-function Navbar() {
+import { SafeUser } from '@/types';
+
+interface NavbarProps {
+  currentUser?: SafeUser | null;
+}
+
+const Navbar: React.FC<NavbarProps> = ({ currentUser }) => {
   return (
     <div className="fixed z-10 w-full bg-white shadow-sm">
       <div className="py-4 border-b">
@@ -12,12 +18,12 @@ function Navbar() {
           <div className="flex items-center justify-between gap-3 md:gap-0">
             <Logo />
             <Search />
-            <UserMenu />
+            <UserMenu currentUser={currentUser} />
           </div>
         </Container>
       </div>
     </div>
   );
-}
+};
 
 export default Navbar;
