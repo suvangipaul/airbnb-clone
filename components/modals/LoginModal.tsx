@@ -100,12 +100,12 @@ const LoginModal = () => {
         icon={AiFillGithub}
         onClick={() => signIn('github')}
       />
-      <div className="mt-4 font-light text-center  text-neutral-500">
+      <div className="mt-4 font-light text-center text-neutral-500">
         <p>
           First time using Airbnb?
           <span
             onClick={onToggle}
-            className="cursor-pointer  text-neutral-800 hover:underline"
+            className="cursor-pointer text-neutral-800 hover:underline"
           >
             {' '}
             Create an account
