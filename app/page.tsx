@@ -9,6 +9,7 @@ interface HomeProps {
 }
 
 const Home = async ({ searchParams }: HomeProps) => {
+  //@ts-ignore
   const listings = await getListings(searchParams);
   const currentUser = await getCurrentUser();
 
